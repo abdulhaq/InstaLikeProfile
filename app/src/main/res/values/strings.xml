@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">InstaLikeProfile</string>
+    <string name="something_wrong">Something went wrong!</string>
+    <string name="no_internet">Could not connect!</string>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/black">
+
+	<android.support.v4.view.ViewPager
+		android:id="@+id/pager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/photo_view_head"
+		android:layout_gravity="top|center_horizontal"
+		android:background="#60000000"
+		android:gravity="center"
+		android:padding="5dp"
+		android:paddingLeft="@dimen/feed_item_padding_left_right"
+		android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+		<life.haq.it.android.instalikeprofile.app.CircularNetworkImageView
+			android:id="@+id/profilePic"
+			android:layout_width="@dimen/feed_item_profile_pic"
+			android:layout_height="@dimen/feed_item_profile_pic"
+			android:radius="5dp"
+			android:layout_marginTop="@dimen/feed_item_profile_pic_margin_top"
+			android:layout_marginBottom="@dimen/feed_item_profile_pic_margin_bottom"
+			android:scaleType="fitCenter"
+			android:background="@drawable/border_around_circle_image">
+		</life.haq.it.android.instalikeprofile.app.CircularNetworkImageView>
+
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" >
+
+			<TextView
+				android:id="@+id/name"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:layout_marginLeft="@dimen/feed_item_profile_name_margin_left"
+				android:textColor="@color/white"
+				android:textSize="@dimen/feed_item_profile_name"
+				android:textStyle="bold"
+				android:clickable="true"
+				android:onClick="nameClick"/>
+
+			<TextView
+				android:id="@+id/timestamp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingRight="@dimen/feed_item_timestamp_margin_right"
+				android:layout_marginTop="@dimen/feed_item_timestamp_margin_top"
+				android:layout_alignParentRight="true"
+				android:textColor="@color/timestamp"
+				android:textSize="@dimen/feed_item_timestamp" />
+
+		</RelativeLayout>
+	</LinearLayout>
+</FrameLayout>
+
+
+
